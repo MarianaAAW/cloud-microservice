@@ -23,8 +23,10 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: ${{ secrets.AWS_REGION }}
           application_name: cloud-microservice-app
           environment_name: cloud-microservice-app-env
-          region: eu-north-1
           version_label: ${{ github.sha }}
-          deployment_package: Dockerrun.aws.json
+          deployment_package: .

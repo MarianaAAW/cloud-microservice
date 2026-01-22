@@ -23,7 +23,7 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: ${{ secrets.AWS_REGION }}
-          application_name: cloud-microservice-app
-          environment_name: cloud-microservice-app-env
+          application_name: cloud-microservice
+          environment_name: Cloud-microservice-env
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
